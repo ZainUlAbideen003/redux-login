@@ -8,10 +8,17 @@ export default function Welcome() {
  console.log(logInState)
   return (
     <>
+    {/* <Navbar/>
+    <div className='text-center'>
+      <h1>Welcome to {logInState.userName}</h1>
+    </div> */}
+        {/* <Navbar/> */}
     <Navbar/>
+    {logInState ===null? <div className='text-center'><h1>Please Login first</h1></div>:<>
     <div className='text-center'>
       <h1>Welcome to {logInState.userName}</h1>
     </div>
+    </>}
     </>
   )
 }
