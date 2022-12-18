@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    logInArray : "",
+    // logInArray : "",
+    logInArray : null,
   };
 
 export const LogInSlice = createSlice({

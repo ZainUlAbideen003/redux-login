@@ -10,12 +10,12 @@ export default function Navbar() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    let flag = true;
+    // let flag = true;
 
-    if (logInState === null) {
-        flag = false;
-    }
-    console.log("flag=>", flag)
+    // if (logInState === null) {
+    //     flag = false;
+    // }
+    // console.log("flag=>", flag)
     
     const logOut = (e) => {
         e.preventDefault();
@@ -30,7 +30,7 @@ export default function Navbar() {
             <div className="container-fluid">
             <p className="navbar-brand"><Link to="/" style={{textDecoration: "none", color: "white"}}>User Management</Link></p>
                 {
-                    flag ? 
+                    logInState ? 
                     
                 <form className="d-flex" role="search" onSubmit={logOut}>
                         <button className="btn btn-outline-light mx-2">Log Out</button>
